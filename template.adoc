@@ -1,0 +1,34 @@
+= Asciidoctor ➟ Reveal.js pass:q[<br><br>] -- Demo Presentation --
+René Wirnata <rene.wirnata@scandio.de>
+2022-01-27
+// -- asciidoc settings --
+:icons: font
+:hide-uri-scheme:
+:figure-caption!:
+:source-highlighter: highlightjs
+:customcss: custom.css
+// -- reveal.js settings -- (see https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/)
+:revealjsdir: reveal.js
+:revealjs_plugins: plugins.js
+:revealjs_plugins_configuration: plugins-conf.js
+:revealjs_center: false
+:revealjs_totalTime: 1800
+:revealjs_transition: fade
+:revealjs_transitionSpeed: slow
+:revealjs_controls: false
+:revealjs_navigationMode: linear
+:revealjs_hash: true
+:revealjs_fragmentInURL: true
+:revealjs_slideNumber: c/t
+// -- pdf export options --
+:revealjs_pdfseparatefragments: false
+:revealjs_pdfmaxpagesperslide: 1
+// -- custom attributes -- (see https://discuss.asciidoctor.org/Getting-blank-lines-in-AsciiDoc-td47.html)
+:blank: pass:[ +]
+:hsp2: pass:a[{nbsp} {nbsp}]
+:hsp3: pass:a[{nbsp} {nbsp} {nbsp}]
+:hsp9: pass:a[{hsp3} {hsp3} {hsp3}]
+
+== Slide one
+
+Some content
