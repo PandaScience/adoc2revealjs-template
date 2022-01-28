@@ -1,0 +1,40 @@
+#!/bin/bash
+
+MASTERFILE=template.adoc
+HTMLFILE=${MASTERFILE%.*}.html
+
+trap ctrl_c INT
+
+ctrl_c () {
+	echo "gracefully killing http.server ;-)"
+	# https://stackoverflow.com/a/3510850
+	kill $(ps aux | grep '[h]ttp.server' | awk '{print $2}')
+}
+
+convert () {
+	# bundle exec asciidoctor-revealjs $MASTERFILE
+	${HOME}/bin/asciidoctor-revealjs $MASTERFILE
+}
+
+echo "Converting asciidoc file to html"
+convert
+
+echo "Starting webserver on :8000"
+python -m http.server >/dev/null 2>&1 &
+
+echo "Opening presentation in browser"
+# chromium http://localhost:8000/${MASTERFILE%.*}.html > /dev/null &
+firefox -private-window http://localhost:8000/${HTMLFILE} > /dev/null &
+
+echo "Watching *.adoc and *.css for changes"
+# NOTE: wildcards won't work with inotifywait, but from v3.20.1 on we can use
+# the include option and watch the entire dir (--> POSIX ext. regex)
+# BUG: including *.js leads to notifications for .git/index.lock - o.O# wtf?!
+inotifywait -mr -e close_write,moved_to \
+	--format "%e -- %f  @  %T" \
+	--timefmt "%T (%F)" \
+	--include ".*(\.adoc|\.css|\.js|\.txt|docinfo.*.html)" . |
+while read events; do
+	echo $events
+	convert
+done
