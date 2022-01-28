@@ -1,3 +1,6 @@
 [submodule "reveal.js"]
 	path = reveal.js
 	url = https://github.com/hakimel/reveal.js/
+[submodule "plugin/pdfexport"]
+	path = plugin/pdfexport
+	url = https://github.com/McShelby/reveal-pdfexport

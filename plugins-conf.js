@@ -1,0 +1,2 @@
+// pdfexport plugin
+pdfExportShortcut: 'E'

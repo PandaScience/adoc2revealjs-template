@@ -1,4 +1,4 @@
-= Asciidoctor ➟ Reveal.js pass:q[<br><br>] -- Demo Presentation --
+= Asciidoctor ➟ Reveal.js pass:q[<br><span id="subtitle">] -- Demo Presentation -- pass:q[</span><br><br>]
 René Wirnata <rene.wirnata@scandio.de>
 2022-01-27
 // -- asciidoc settings --
@@ -29,6 +29,52 @@ René Wirnata <rene.wirnata@scandio.de>
 :hsp3: pass:a[{nbsp} {nbsp} {nbsp}]
 :hsp9: pass:a[{hsp3} {hsp3} {hsp3}]
 
-== Slide one
+== Useful Plugins
 
-Some content
+In reveal.js version 3.x plugins are configured in two files:
+
+
+[%step,source,adoc,linenums]
+----
+:revealjs_plugins: plugins.js <1>
+:revealjs_plugins_configuration: plugins-conf.js <2>
+----
+
+<1> includes all javascript plugin sources (loading)
+<2> is used to set plugin options (configuration)
+
+=== PDF Export
+
+The https://github.com/McShelby/reveal-pdfexport[pdfexport plugin] simply
+adds a shortcut for switching to PDF mode, i.e. adding [.gold]#`?print-pdf`# to the base URL
+
+[.purple]#*Loading*#
+
+[source,javascript,linenums]
+----
+{ src: 'plugin/pdfexport.js', async: true }
+----
+
+[.purple]#*Configuration*#
+
+[source,javascript,linenums]
+----
+pdfExportShortcut: 'E'
+----
+
+== Code
+
+[source,java,linenums,highlight='1..9|2..4|6..8']
+----
+public class TestClass { // <1>
+    public TestClass() {
+
+    }
+
+    public void testMethod() {
+
+    }
+}
+----
+
+<1> test 123
