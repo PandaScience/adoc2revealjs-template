@@ -47,20 +47,18 @@ In reveal.js version 3.x plugins are configured in two files:
 :revealjs_plugins_configuration: plugins-conf.js <2>
 ----
 
-{blank}
+{vsp12}
 
 <1> includes all javascript plugin sources (loading)
 <2> is used to set plugin options (configuration)
 
 {vsp12}
 
----
+[NOTE.smaller]
+All plugins are included via `git submodules` and +
+have been tested to work with this Reveal.js version.
 
 {vsp12}
--> see Callouts
-footnote:[For the green markers, the `callouts` feature has been used.]
-& Footnotes
-footnote:[Footnotes like this can be created with the `footnote:[\]` macro]
 
 
 
@@ -108,9 +106,9 @@ adds shortcuts to \...
 
 [source,javascript,linenums]
 ----
-// Shortcut for showing all fragments
+/* Shortcut for showing all fragments */
 skipFragmentsShowShortcut: 'V',
-// Shortcut for hiding all fragments
+/* Shortcut for hiding all fragments */
 skipFragmentsHideShortcut: 'C',
 ----
 
@@ -120,8 +118,11 @@ skipFragmentsHideShortcut: 'C',
 === Skip Fragments (2)
 
 This plugin is also used for a small script bound to +
-kbd:[PgUp] and kbd:[PgDown], that enables you to skip through slides without
-having to reveal/hide every single fragment:
+kbd:[PgUp] and kbd:[PgDown], +
+that enables you to skip through slides without +
+having to reveal/hide every single fragment.
+
+*-- Configuration --*
 
 [source,javascript,linenums]
 ----
