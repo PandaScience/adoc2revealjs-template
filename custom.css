@@ -74,6 +74,31 @@
 	line-height: 1.2;
 }
 
+/* ADMONITIONS */
+.reveal .slides .admonitionblock table {
+	border: none;
+}
+.reveal .slides .admonitionblock {
+	border-radius: 15px;
+	width: 90%;
+	margin: auto;
+	font-size: 80%;
+}
+.reveal .slides .admonitionblock.note {
+	background-color: #7eaa967a;
+}
+.reveal .slides .admonitionblock.tip {
+	background-color: #6495ED7a;
+}
+.reveal .slides .admonitionblock.important {
+	background-color: #FF7F507a;
+}
+.reveal .slides .admonitionblock.warning {
+	background-color: #DE31637a;
+}
+.reveal .slides .admonitionblock.caution {
+	background-color: #FF00FF7a;
+}
 
 
 /* --------------------- Text Modificators --------------------- */
