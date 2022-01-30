@@ -1,10 +1,23 @@
 // pdfexport plugin
 pdfExportShortcut: 'E',
 
+
 // Shortcut for showing all fragments
 skipFragmentsShowShortcut: 'V',
 // Shortcut for hiding all fragments
 skipFragmentsHideShortcut: 'C',
+
+
+// elapsed time-bar config
+// - (required) your allotted time for presentation
+allottedTime: 30 * 60 * 1000, // 30 minutes
+// - (optional) height of page/time progress bar
+progressBarHeight: 3,
+// - (optional) bar color
+barColor: 'rgb(200,0,0)',
+// - (optional) bar color when timer is paused
+pausedBarColor: 'rgba(200,0,0,.6)',
+
 
 // use e.g. https://keycode.info to find keycodes
 keyboard: {
@@ -33,4 +46,9 @@ keyboard: {
 			}
 			SkipFragments.showAll()
 		},
+
+	// pause/resume elapsed time bar with ENTER
+    13: function() { ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause(); },
+    // reset timer when 'r' is pressed
+    82: function() { ElapsedTimeBar.reset(); },
 }

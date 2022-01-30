@@ -158,8 +158,32 @@ the combination kbd:[N-M] + kbd:[Enter].
 
 
 
+=== Elapsed Time Bar
 
+The https://github.com/tkrkt/reveal.js-elapsed-time-bar[elapsed time bar]
+plugin add a customizable progress bar at the bottom of the slide that tracks
+your talk-time.
 
+*-- Loading --*
+
+[source,javascript,linenums]
+----
+{ src: 'plugin/jump-plugin/jump/jump.js' },
+----
+
+*-- Configuration --*
+
+[source,js,linenums]
+----
+/* - (required) allotted time for presentation (30min) */
+allottedTime: 30 * 60 * 1000,
+/* - (optional) height of page/time progress bar */
+progressBarHeight: 3,
+/* - (optional) bar color */
+barColor: 'rgb(200,0,0)',
+/* - (optional) bar color when timer is paused */
+pausedBarColor: 'rgba(200,0,0,.6)',
+----
 
 
 
