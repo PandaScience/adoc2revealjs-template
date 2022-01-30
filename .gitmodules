@@ -7,3 +7,6 @@
 [submodule "plugin/skip-fragments"]
 	path = plugin/skip-fragments
 	url = https://github.com/PiDayDev/reveal-skip-fragments
+[submodule "plugin/jump-plugin"]
+	path = plugin/jump-plugin
+	url = https://github.com/SethosII/reveal.js-jump-plugin

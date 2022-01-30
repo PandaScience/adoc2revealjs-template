@@ -2,7 +2,9 @@
 René Wirnata <rene.wirnata@scandio.de>
 2022-01-27
 // -- asciidoc settings --
+:experimental:
 :icons: font
+:stem: latexmath
 :hide-uri-scheme:
 :figure-caption!:
 :source-highlighter: highlightjs
@@ -31,6 +33,7 @@ René Wirnata <rene.wirnata@scandio.de>
 :hsp2: pass:a[{nbsp} {nbsp}]
 :hsp3: pass:a[{nbsp} {nbsp} {nbsp}]
 :hsp9: pass:a[{hsp3} {hsp3} {hsp3}]
+
 
 
 == Useful Plugins
@@ -82,14 +85,17 @@ pdfExportShortcut: 'E'
 ----
 
 
-=== Skip Fragments
+
+=== Skip Fragments (1)
 
 The https://github.com/PiDayDev/reveal-skip-fragments[skip-fragments plugin]
-adds shortcuts to
+adds shortcuts to \...
 
 [%step]
 * reveal `SkipFragments.showAll();` or
-* hide `SkipFragments.hideAll();` all fragements on a slide.
+* hide `SkipFragments.hideAll();`
+
+\... all fragments on a slide.
 
 *-- Loading --*
 
@@ -107,6 +113,54 @@ skipFragmentsShowShortcut: 'V',
 // Shortcut for hiding all fragments
 skipFragmentsHideShortcut: 'C',
 ----
+
+
+
+// NOTE: for kbd[] macro to render, :experimental: is required in the header
+=== Skip Fragments (2)
+
+This plugin is also used for a small script bound to +
+kbd:[PgUp] and kbd:[PgDown], that enables you to skip through slides without
+having to reveal/hide every single fragment:
+
+[source,javascript,linenums]
+----
+keyboard: {
+  33: function() {
+      let idx = Reveal.getIndices()
+      let routes = Reveal.availableRoutes()
+      if( routes.up ){
+        Reveal.slide(idx.h, idx.v - 1);
+      } else if( routes.left ){
+        Reveal.slide(idx.h - 1);
+      }
+      SkipFragments.showAll()
+    },
+}
+----
+
+
+
+=== Jump to Slide
+
+The https://github.com/SethosII/reveal.js-jump-plugin[jump-plugin] allows you
+to easily switch to any slide using its kbd:[number] followed by kbd:[Enter].
+
+For jumping to the M^th^ _vertical_ slide of the N^th^ _horizontal_ slide, use
+the combination kbd:[N-M] + kbd:[Enter].
+
+*-- Loading --*
+
+[source,javascript,linenums]
+----
+{ src: 'plugin/jump-plugin/jump/jump.js' },
+----
+
+
+
+
+
+
 
 
 == Code
