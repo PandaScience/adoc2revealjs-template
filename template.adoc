@@ -6,6 +6,7 @@ René Wirnata <rene.wirnata@scandio.de>
 :hide-uri-scheme:
 :figure-caption!:
 :source-highlighter: highlightjs
+:highlightjs-languages: asciidoc
 :customcss: custom.css
 // -- reveal.js settings -- (see https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/)
 :revealjsdir: reveal.js
@@ -61,6 +62,34 @@ adds a shortcut for switching to PDF mode, i.e. adding [.gold]#`?print-pdf`# to 
 ----
 pdfExportShortcut: 'E'
 ----
+
+
+=== Skip Fragments
+
+The https://github.com/PiDayDev/reveal-skip-fragments[skip-fragments plugin]
+adds shortcuts to
+
+[%step]
+* reveal `SkipFragments.showAll();` or
+* hide `SkipFragments.hideAll();` all fragements on a slide.
+
+*-- Loading --*
+
+[source,javascript,linenums]
+----
+{ src: 'plugin/skip-fragments/skip-fragments.js' }
+----
+
+*-- Configuration --*
+
+[source,javascript,linenums]
+----
+// Shortcut for showing all fragments
+skipFragmentsShowShortcut: 'V',
+// Shortcut for hiding all fragments
+skipFragmentsHideShortcut: 'C',
+----
+
 
 == Code
 

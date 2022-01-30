@@ -4,3 +4,6 @@
 [submodule "plugin/pdfexport"]
 	path = plugin/pdfexport
 	url = https://github.com/McShelby/reveal-pdfexport
+[submodule "plugin/skip-fragments"]
+	path = plugin/skip-fragments
+	url = https://github.com/PiDayDev/reveal-skip-fragments
