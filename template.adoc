@@ -26,37 +26,55 @@ René Wirnata <rene.wirnata@scandio.de>
 :revealjs_pdfmaxpagesperslide: 1
 // -- custom attributes -- (see https://discuss.asciidoctor.org/Getting-blank-lines-in-AsciiDoc-td47.html)
 :blank: pass:[ +]
+:vsp12: pass:[<p style="margin-bottom:0.50em; display:flex"></p>]
+:vsp13: pass:[<p style="margin-bottom:0.33em; display:flex"></p>]
 :hsp2: pass:a[{nbsp} {nbsp}]
 :hsp3: pass:a[{nbsp} {nbsp} {nbsp}]
 :hsp9: pass:a[{hsp3} {hsp3} {hsp3}]
+
 
 == Useful Plugins
 
 In reveal.js version 3.x plugins are configured in two files:
 
 
-[%step,source,adoc,linenums]
+[source,linenums]
 ----
 :revealjs_plugins: plugins.js <1>
 :revealjs_plugins_configuration: plugins-conf.js <2>
 ----
 
+{blank}
+
 <1> includes all javascript plugin sources (loading)
 <2> is used to set plugin options (configuration)
+
+{vsp12}
+
+---
+
+{vsp12}
+-> see Callouts
+footnote:[For the green markers, the `callouts` feature has been used.]
+& Footnotes
+footnote:[Footnotes like this can be created with the `footnote:[\]` macro]
+
+
 
 === PDF Export
 
 The https://github.com/McShelby/reveal-pdfexport[pdfexport plugin] simply
-adds a shortcut for switching to PDF mode, i.e. adding [.gold]#`?print-pdf`# to the base URL
+adds a shortcut for switching to PDF mode, i.e. adding `?print-pdf` to the base
+URL.
 
-[.purple]#*Loading*#
+*-- Loading --*
 
 [source,javascript,linenums]
 ----
 { src: 'plugin/pdfexport.js', async: true }
 ----
 
-[.purple]#*Configuration*#
+*-- Configuration --*
 
 [source,javascript,linenums]
 ----
