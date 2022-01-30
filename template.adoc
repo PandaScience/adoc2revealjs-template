@@ -68,6 +68,8 @@ The https://github.com/McShelby/reveal-pdfexport[pdfexport plugin] simply
 adds a shortcut for switching to PDF mode, i.e. adding `?print-pdf` to the base
 URL.
 
+---
+
 *-- Loading --*
 
 [source,javascript,linenums]
@@ -95,6 +97,8 @@ adds shortcuts to \...
 
 \... all fragments on a slide.
 
+---
+
 *-- Loading --*
 
 [source,javascript,linenums]
@@ -121,6 +125,8 @@ This plugin is also used for a small script bound to +
 kbd:[PgUp] and kbd:[PgDown], +
 that enables you to skip through slides without +
 having to reveal/hide every single fragment.
+
+---
 
 *-- Configuration --*
 
@@ -150,6 +156,8 @@ to easily switch to any slide using its kbd:[number] followed by kbd:[Enter].
 For jumping to the M^th^ _vertical_ slide of the N^th^ _horizontal_ slide, use
 the combination kbd:[N-M] + kbd:[Enter].
 
+---
+
 *-- Loading --*
 
 [source,javascript,linenums]
@@ -164,6 +172,8 @@ the combination kbd:[N-M] + kbd:[Enter].
 The https://github.com/tkrkt/reveal.js-elapsed-time-bar[elapsed time bar]
 plugin add a customizable progress bar at the bottom of the slide that tracks
 your talk-time.
+
+---
 
 *-- Loading --*
 
