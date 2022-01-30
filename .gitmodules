@@ -10,3 +10,6 @@
 [submodule "plugin/jump-plugin"]
 	path = plugin/jump-plugin
 	url = https://github.com/SethosII/reveal.js-jump-plugin
+[submodule "plugin/elapsed-time-bar"]
+	path = plugin/elapsed-time-bar
+	url = https://github.com/tkrkt/reveal.js-elapsed-time-bar
