@@ -13,3 +13,6 @@
 [submodule "plugin/elapsed-time-bar"]
 	path = plugin/elapsed-time-bar
 	url = https://github.com/tkrkt/reveal.js-elapsed-time-bar
+[submodule "plugin/plugin-revealjs-mouse-pointer"]
+	path = plugin/mouse-pointer
+	url = https://github.com/caiofcm/plugin-revealjs-mouse-pointer

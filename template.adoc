@@ -188,6 +188,18 @@ pausedBarColor: 'rgba(200,0,0,.6)',
 
 
 
+=== Mouse Pointer
+
+The https://github.com/caiofcm/plugin-revealjs-mouse-pointer[mouse pointer]
+plugin is triggered with kbd:[Shift] + kbd:[CAPSLOCK] and transforms your
+cursor into a cirular red pointer.
+
+{vsp12}
+
+NOTE: This plugin cannot be customized and needs a proper re-write.
+
+
+
 == Code
 
 [source,java,linenums,highlight='1..9|2..4|6..8']
