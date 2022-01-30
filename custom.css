@@ -37,7 +37,7 @@
 /* LINKS: add font-awesome icon after */
 .reveal a::after {
 	content: "\f35d";
-	vertical-align: middle;
+	vertical-align: top;
 	font-size: 50%;
 	font-family: "Font Awesome 5 Free";
 	/* 400 = regular, 800 = solid */
@@ -45,11 +45,15 @@
 	font-weight: 800;
 	margin-left: 0.2em;
 }
+.reveal a {
+	margin: auto 0.25em;
+}
 
 /* INLINE CODE: decrease font-size */
 .reveal :not(pre.highlightjs) > code {
 	font-size: 85%;
 	color: #ecb321;
+	margin: auto 0.25em;
 }
 
 /* CODE CALLOUTS */
