@@ -14,7 +14,7 @@ René Wirnata <rene.wirnata@scandio.de>
 :revealjsdir: reveal.js
 :revealjs_plugins: plugins.js
 :revealjs_plugins_configuration: plugins-conf.js
-:revealjs_center: false
+// :revealjs_center: false
 :revealjs_totalTime: 1800
 :revealjs_transition: fade
 :revealjs_transitionSpeed: slow
@@ -30,15 +30,48 @@ René Wirnata <rene.wirnata@scandio.de>
 :blank: pass:[ +]
 :vsp12: pass:[<p style="margin-bottom:0.50em; display:flex"></p>]
 :vsp13: pass:[<p style="margin-bottom:0.33em; display:flex"></p>]
+:vsp14: pass:[<p style="margin-bottom:0.25em; display:flex"></p>]
 :hsp2: pass:a[{nbsp} {nbsp}]
 :hsp3: pass:a[{nbsp} {nbsp} {nbsp}]
 :hsp9: pass:a[{hsp3} {hsp3} {hsp3}]
 
 
 
+== Customizations
+
+Some Asciidoctor elements have been customized via CSS to
+https://github.com/asciidoctor/asciidoctor-reveal.js/tree/master/examples
+
+
+=== Admonitions
+
+NOTE: This is a note.
+
+{vsp14}
+
+TIP: This is a tip.
+
+{vsp14}
+
+IMPORTANT: This is important.
+
+{vsp14}
+
+WARNING: This is a warning.
+
+{vsp14}
+
+CAUTION: Here you have to be cautious!
+
+
+
+
+
 == Useful Plugins
 
-In reveal.js version 3.x plugins are configured in two files:
+In reveal.js v3.x
+https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware[external plugins]
+are configured in two files:
 
 
 [source,linenums]
@@ -54,7 +87,7 @@ In reveal.js version 3.x plugins are configured in two files:
 
 {vsp12}
 
-[NOTE.smaller]
+[NOTE]
 All plugins are included via `git submodules` and +
 have been tested to work with this Reveal.js version.
 
