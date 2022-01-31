@@ -2,9 +2,9 @@
 pdfExportShortcut: 'E',
 
 
-// Shortcut for showing all fragments
+// shortcut for showing all fragments
 skipFragmentsShowShortcut: 'V',
-// Shortcut for hiding all fragments
+// shortcut for hiding all fragments
 skipFragmentsHideShortcut: 'C',
 
 
@@ -17,6 +17,16 @@ progressBarHeight: 3,
 barColor: 'rgb(200,0,0)',
 // - (optional) bar color when timer is paused
 pausedBarColor: 'rgba(200,0,0,.6)',
+
+
+verticator: {
+	darktheme: true,
+	color: 'white',
+	// color: 'black',
+	// oppositecolor: 'white',
+	// skipuncounted: false,
+	clickable: true
+},
 
 
 // use e.g. https://keycode.info to find keycodes

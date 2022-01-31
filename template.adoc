@@ -241,6 +241,38 @@ cursor into a cirular red pointer.
 
 NOTE: This plugin cannot be customized and needs a proper re-write.
 
+=== Verticator
+
+The https://github.com/Martinomagnifico/reveal.js-verticator[verticator] plugin
+adds small dots on the right of the +
+slide indication progress in the vertical slide axis.
+
+IMPORTANT: This plugin cannot be used as is, because the user is +
+supposed to add a `<ul class='verticator'></ul>` tag +
+right after the `<div class='reveal'>` tag.
+
+---
+
+*-- Fix --*
+
+[source,js,linenums]
+----
+let reveal = document.getElementsByClassName("reveal")[0];
+let verticator = document.createElement("ul");
+verticator.className = "verticator";
+reveal.prepend(verticator);
+----
+
+*-- Loading --*
+
+[source,js,linenums]
+----
+{ src: 'plugin/plugin_fixes.js' },
+{ src: 'plugin/.../verticator.js' },
+----
+
+
+
 
 
 == Code
