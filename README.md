@@ -5,9 +5,9 @@
 Get the Asciidoctor reveal.js converter using one of the technology stacks
 described on the [official page](https://docs.asciidoctor.org/reveal.js-converter/latest/).
 
-Go for the latest **stable release version** (currently: v4.1.0-rc.5), which can
-utilize **reveal.js 3.9.2**. The easiest way is to download the pre-built binary
-from [github](https://github.com/asciidoctor/asciidoctor-reveal.js/releases)).
+Go for the *v5.0.0-rc.1* pre-release version or later, which translates to
+reveal.js 4.1.2. The easiest way is to download the pre-built binary from
+[github](https://github.com/asciidoctor/asciidoctor-reveal.js/releases)).
 
 
 ## Getting Started
@@ -29,8 +29,7 @@ make sure you set/adapt the following options properly:
 
 1. Paths to plugin files in your new `*.adoc`
 ```
-:revealjs_plugins: plugins.js
-:revealjs_plugins_configuration: plugins-conf.js
+:docinfo: private
 ```
 2. Relative plugin paths in `plugin.js`
 3. Name of the `*.adoc` in `converter`

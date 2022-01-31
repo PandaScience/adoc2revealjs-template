@@ -5,7 +5,7 @@ HTMLFILE=${MASTERFILE%.*}.html
 
 convert () {
 	# bundle exec asciidoctor-revealjs $MASTERFILE
-	${HOME}/bin/asciidoctor-revealjs $MASTERFILE
+	${HOME}/bin/asciidoctor-revealjs-5 $MASTERFILE
 }
 
 echo "Converting asciidoc file to html"
@@ -25,7 +25,7 @@ echo "Watching *.adoc and *.css for changes"
 inotifywait -mr -e close_write,moved_to \
 	--format "%e -- %f  @  %T" \
 	--timefmt "%T (%F)" \
-	--include ".*(\.adoc|\.css|\.js|\.txt|docinfo.*.html)" . |
+	--include ".*(\.adoc|\.css|\.js|\.txt|docinfo.*\.html)" . |
 while read events; do
 	echo $events
 	convert

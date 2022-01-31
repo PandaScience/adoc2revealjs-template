@@ -12,8 +12,7 @@ René Wirnata <rene.wirnata@scandio.de>
 :customcss: custom.css
 // -- reveal.js settings -- (see https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/)
 :revealjsdir: reveal.js
-:revealjs_plugins: plugins.js
-:revealjs_plugins_configuration: plugins-conf.js
+:docinfo: private
 // :revealjs_center: false
 :revealjs_totalTime: 1800
 :revealjs_transition: fade
