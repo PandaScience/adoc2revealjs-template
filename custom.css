@@ -1,4 +1,5 @@
 /* NOTE: need to set :revealjs_center: false in header !! */
+@import "plugin/verticator/assets/css/verticator.css";
 
 /* decrease font size and change text color globally */
 :root {

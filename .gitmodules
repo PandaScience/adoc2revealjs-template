@@ -16,3 +16,6 @@
 [submodule "plugin/plugin-revealjs-mouse-pointer"]
 	path = plugin/mouse-pointer
 	url = https://github.com/caiofcm/plugin-revealjs-mouse-pointer
+[submodule "plugin/verticator"]
+	path = plugin/verticator
+	url = https://github.com/Martinomagnifico/reveal.js-verticator
