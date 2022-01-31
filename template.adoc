@@ -74,7 +74,7 @@ https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware[external p
 are configured in two files:
 
 
-[source,linenums]
+[source,adoc,linenums]
 ----
 :revealjs_plugins: plugins.js <1>
 :revealjs_plugins_configuration: plugins-conf.js <2>
@@ -105,14 +105,14 @@ URL.
 
 *-- Loading --*
 
-[source,javascript,linenums]
+[source,js,linenums]
 ----
-{ src: 'plugin/pdfexport.js', async: true }
+{ src: 'plugin/.../pdfexport.js', async: true }
 ----
 
 *-- Configuration --*
 
-[source,javascript,linenums]
+[source,js,linenums]
 ----
 pdfExportShortcut: 'E'
 ----
@@ -134,14 +134,14 @@ adds shortcuts to \...
 
 *-- Loading --*
 
-[source,javascript,linenums]
+[source,js,linenums]
 ----
-{ src: 'plugin/skip-fragments/skip-fragments.js' }
+{ src: 'plugin/.../skip-fragments.js' }
 ----
 
 *-- Configuration --*
 
-[source,javascript,linenums]
+[source,js,linenums]
 ----
 /* Shortcut for showing all fragments */
 skipFragmentsShowShortcut: 'V',
@@ -163,7 +163,7 @@ having to reveal/hide every single fragment.
 
 *-- Configuration --*
 
-[source,javascript,linenums]
+[source,js,linenums]
 ----
 keyboard: {
   33: function() {
@@ -193,9 +193,9 @@ the combination kbd:[N-M] + kbd:[Enter].
 
 *-- Loading --*
 
-[source,javascript,linenums]
+[source,js,linenums]
 ----
-{ src: 'plugin/jump-plugin/jump/jump.js' },
+{ src: 'plugin/.../jump.js' },
 ----
 
 
@@ -210,9 +210,9 @@ your talk-time.
 
 *-- Loading --*
 
-[source,javascript,linenums]
+[source,js,linenums]
 ----
-{ src: 'plugin/jump-plugin/jump/jump.js' },
+{ src: 'plugin/.../elapsed-time-bar.js' },
 ----
 
 *-- Configuration --*
@@ -240,6 +240,17 @@ cursor into a cirular red pointer.
 {vsp12}
 
 NOTE: This plugin cannot be customized and needs a proper re-write.
+
+---
+
+*-- Loading --*
+
+[source,js,linenums]
+----
+{ src: 'plugin/.../mouse-pointer.js', async: true },
+----
+
+
 
 === Verticator
 
