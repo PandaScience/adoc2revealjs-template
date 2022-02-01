@@ -1,6 +1,11 @@
 /* NOTE: need to set :revealjs_center: false in header !! */
 @import "plugin/verticator/assets/css/verticator.css";
 
+/* How to use FontAwesome Icons: */
+/* font-weight: 400 = regular, 800 = solid */
+/* see https://fontawesome.com/v5.15/how-to-use/on-the-web/advanced/css-pseudo-elements */
+
+
 /* decrease font size and change text color globally */
 :root {
 	--custom-color: #aebed6;
@@ -41,8 +46,6 @@
 	vertical-align: top;
 	font-size: 50%;
 	font-family: "Font Awesome 5 Free";
-	/* 400 = regular, 800 = solid */
-	/* see https://fontawesome.com/v5.15/how-to-use/on-the-web/advanced/css-pseudo-elements */
 	font-weight: 800;
 	margin-left: 0.2em;
 }
@@ -76,14 +79,15 @@
 }
 
 /* ADMONITIONS */
-.reveal .slides .admonitionblock table {
-	border: none;
-}
 .reveal .slides .admonitionblock {
 	border-radius: 15px;
 	width: 90%;
 	margin: auto;
 	font-size: 80%;
+}
+
+.reveal .slides .admonitionblock table {
+	border: none;
 }
 .reveal .slides .admonitionblock.note {
 	background-color: #7eaa967a;
@@ -99,6 +103,31 @@
 }
 .reveal .slides .admonitionblock.caution {
 	background-color: #FF00FF7a;
+}
+.reveal .slides .admonitionblock .icon {
+	vertical-align: middle;
+}
+.reveal .slides .admonitionblock .icon > i::before {
+	font-size: 150%;
+	font-weight: 400;
+}
+.reveal .slides .admonitionblock:not(.smiley):not(.thumb) .icon > i::before {
+	display: none;
+}
+.reveal .slides .admonitionblock.smiley.note .icon > i::before {
+	content: "\f118";
+}
+.reveal .slides .admonitionblock.smiley.important .icon > i::before {
+	content: "\f119";
+}
+.reveal .slides .admonitionblock.smiley.warning .icon > i::before {
+	content: "\f11a";
+}
+.reveal .slides .admonitionblock.thumb.note .icon > i::before {
+	content: "\f164";
+}
+.reveal .slides .admonitionblock.thumb.important .icon > i::before {
+	content: "\f165";
 }
 
 
